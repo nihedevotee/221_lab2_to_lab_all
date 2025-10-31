@@ -21,7 +21,7 @@ public class no5Elab2 {
         int left=0;
         int store=0;
         int count=0;
-        
+
         int max=Integer.MIN_VALUE;
 
         for (int right = 0; right < arr.length; right++) {

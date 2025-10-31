@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class no7Glab2 {
+public class no7Glab2VHULL {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out, true);
@@ -21,34 +21,25 @@ public class no7Glab2 {
             StringTokenizer st3 = new StringTokenizer(br.readLine());
             int a=Integer.parseInt(st3.nextToken());
             int b=Integer.parseInt(st3.nextToken());
-            int up=UPPER(arr, b);
-            int down=DOWN(arr,a);
-            pw.println(up-down);
-        }
-    }
-    public static int UPPER(int [] a, int x){
-        int l=0;
-        int r=a.length;
-        while (l<r) {
-            int mid =l+ (r-l)/2;
-            if (a[mid]<=x){
-                l=mid+1;
-                //r=mid;
+
+            int j=0;
+            int n = arr.length;
+
+            while (j < n && arr[j] < a) {
+                j++;
             }
-            else{r=mid;}
-        }
-        return l;
-    }
-    public static int DOWN(int [] a, int x){
-        int l=0;
-        int r=a.length;
-        while (l<r) {
-            int mid = l+(r-l)/2;
-            if (a[mid]<x){
-                l=mid+1;
+
+            int k = n - 1;
+            while (k >= 0 && arr[k] > b) {
+                k--;
             }
-            else{r=mid;}
+
+            int count = 0;
+            if (j <= k) {
+                count = k - j + 1;
+            } 
+            pw.println(count);
         }
-        return l;
+            pw.flush();
     }
 }

@@ -22,7 +22,7 @@ public class no2Blab3 {
         pw.flush();
     }
 
-    static long mergeSort(long[] arr, long[] temp, int left, int right) {
+    public static long mergeSort(long[] arr, long[] temp, int left, int right) {
         if (left >= right)
             return 0;
         int mid = (left + right) / 2;
@@ -36,7 +36,7 @@ public class no2Blab3 {
         return invCount;
     }
 
-    static long countPairs(long[] arr, int left, int mid, int right) {
+    public static long countPairs(long[] arr, int left, int mid, int right) {
         long count = 0;
         for (int j = mid + 1; j <= right; j++) {
             long val = arr[j] * arr[j];
@@ -46,7 +46,7 @@ public class no2Blab3 {
         return count;
     }
 
-    static int upperBound(long[] arr, int left, int right, long val) {
+    public static int upperBound(long[] arr, int left, int right, long val) {
         int l=left, r=right, ans = right + 1;
         while (l <= r) {
             int mid = (l + r) / 2;
@@ -60,7 +60,7 @@ public class no2Blab3 {
         return ans;
     }
 
-    static void merge(long[] arr, long[] temp, int left, int mid, int right) {
+    public static void merge(long[] arr, long[] temp, int left, int mid, int right) {
         int i = left, j = mid + 1, k = left;
 
         while (i <= mid && j <= right) {

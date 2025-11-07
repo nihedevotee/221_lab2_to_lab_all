@@ -23,6 +23,7 @@ public class no5Elab3 {
                 long num=(expo(a, n + 1, m) - a + m) % m;
                 long deno= (a-1 + m)% m;
                 long inv= expo (deno,m-2,m);
+                //long inv = modInverse(deno, m);
                 long sum = (num * inv)%m;
 
                 // sum=sum%m;

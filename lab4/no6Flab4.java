@@ -41,7 +41,7 @@ public class no6Flab4 {
             }
             if (y+1<=n) {
                 count++;
-                list.add((x)+" "+(y+1));
+                list.add((x)+" "+(y+1)); //
             }
 
             if (x+1<=n && y-1!=0) {
